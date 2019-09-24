@@ -22,15 +22,15 @@ public class Bill {
     //@EqualsAndHashCode.Include
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "bill-error-1")
     private String name;
 
     private String observation;
 
-    @NotNull
+    @NotNull(message = "bill-error-2")
     private String frequency;
 
-    @DecimalMin("0")
+    @DecimalMin(value = "0", message = "bill-error-3")
     private double value;
 
     private Date expirationDate;
