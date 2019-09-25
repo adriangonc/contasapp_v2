@@ -28,7 +28,7 @@ public class Bill {
     private String observation;
 
     @NotNull(message = "bill-error-2")
-    private String frequency;
+    private BillFrequency frequency;
 
     @DecimalMin(value = "0", message = "bill-error-3")
     private double value;
