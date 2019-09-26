@@ -23,7 +23,7 @@ public class BillResource {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Bill create(@Valid @RequestBody Bill bill){
+        public Bill create(@Valid @RequestBody Bill bill){
         return bills.save(bill);
     }
 
