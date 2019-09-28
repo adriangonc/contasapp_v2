@@ -1,6 +1,6 @@
 package com.contas.appcontas.model;
 
-public enum BillFrequency {
+public enum BillFrequencyEnum {
     MENSAL,
     ANUAL,
     EVENTUAL

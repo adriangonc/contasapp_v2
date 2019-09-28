@@ -1,7 +1,7 @@
 package com.contas.appcontas.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -28,10 +28,13 @@ public class Bill {
     private String observation;
 
     @NotNull(message = "bill-error-2")
-    private BillFrequency frequency;
+    private BillFrequencyEnum frequency;
 
     @DecimalMin(value = "0", message = "bill-error-3")
     private double value;
 
     private Date expirationDate;
+
+    @DecimalMin(value = "1", message = "bill-error-4")
+    private int idMonth;
 }
