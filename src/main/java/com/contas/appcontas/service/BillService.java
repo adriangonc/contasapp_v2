@@ -4,7 +4,7 @@ import com.contas.appcontas.model.Bill;
 import com.contas.appcontas.service.exception.BillAlreadyExistException;
 
 public class BillService {
-    public void save(Bill bill){
+    public Bill save(final Bill bill){
         throw new BillAlreadyExistException();
     }
 }
