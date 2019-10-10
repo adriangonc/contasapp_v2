@@ -36,5 +36,5 @@ public class Bill {
     private Date expirationDate;
 
     @DecimalMin(value = "1", message = "bill-error-4")
-    private int idMonth;
+    private Integer idMonth;
 }
