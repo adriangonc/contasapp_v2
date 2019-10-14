@@ -31,4 +31,14 @@ public class BillResource {
         return billService.save(bill);
     }
 
+    @PutMapping
+    public Bill edit(@Valid @RequestBody Bill bill) {
+        return billService.edit(bill);
+    }
+
+    @DeleteMapping
+    public Bill delete(@Valid @RequestBody Bill bill) {
+        return billService.delete(bill);
+    }
+
 }

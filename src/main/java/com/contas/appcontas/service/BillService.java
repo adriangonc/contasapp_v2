@@ -27,4 +27,13 @@ public class BillService {
 
         return bills.save(bill);
     }
+
+    public Bill edit(final Bill bill){
+        return bills.save(bill);
+    }
+
+    public Bill delete(final Bill bill){
+        bills.delete(bill);
+        return bill;
+    }
 }
