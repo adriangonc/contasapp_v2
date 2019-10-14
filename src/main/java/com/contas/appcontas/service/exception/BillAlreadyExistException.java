@@ -1,4 +1,9 @@
 package com.contas.appcontas.service.exception;
 
-public class BillAlreadyExistException extends RuntimeException {
+import org.springframework.http.HttpStatus;
+
+public class BillAlreadyExistException extends BusinessException {
+    public BillAlreadyExistException() {
+        super("bill-error-6", HttpStatus.BAD_REQUEST);
+    }
 }
