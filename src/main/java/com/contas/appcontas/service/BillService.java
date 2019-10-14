@@ -32,8 +32,11 @@ public class BillService {
         return bills.save(bill);
     }
 
-    public Bill delete(final Bill bill){
-        bills.delete(bill);
-        return bill;
+    public void delete(final Long id){
+        bills.deleteById(id);
+    }
+
+    public Optional<Bill> findById(Long id){
+        return bills.findById(id);
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/bills")
@@ -31,14 +32,16 @@ public class BillResource {
         return billService.save(bill);
     }
 
-    @PutMapping
-    public Bill edit(@Valid @RequestBody Bill bill) {
+    @PutMapping("/{id}")
+    public Bill edit(@PathVariable Long id, @Valid @RequestBody Bill bill) {
+        bill.setId(id);
         return billService.edit(bill);
     }
 
-    @DeleteMapping
-    public Bill delete(@Valid @RequestBody Bill bill) {
-        return billService.delete(bill);
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        billService.delete(id);
     }
 
 }
